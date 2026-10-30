@@ -13,9 +13,11 @@
 <ul>
 <li><strong>Input Monitoring:</strong> to hear TurnOver's keys (VO keys, the TurnOver layer, quick navigation). TurnOver looks at a</li>
 </ul>
+<p>voiceover-quiet, mutes VoiceOver's sound and throws it away: nothing is recorded, saved or sent, and no other app's sound is touched.</p>
 <ul>
 <li><strong>Screen Recording:</strong> only for screen recognition and describing a picture, when you ask. Both run on your Mac.</li>
 <li><strong>Automation (asked once, for one app at a time):</strong> for example Keynote, to read a slide while a show plays.</li>
+<li><strong>Audio (CoExist):</strong> to keep VoiceOver's sound quiet while TurnOver reads. A small separate program,</li>
 </ul>
 <p>TurnOver does not ask for Full Disk Access.</p>
 <h2>What leaves your Mac</h2>
@@ -53,19 +55,20 @@
 <h2>Apps that speak through TurnOver</h2>
 <p>An app can ask TurnOver to speak for it (a game, for example), through a port on this Mac only. TurnOver works out for itself which program is asking (from the Mac's own records, not from what the app says), and the first time asks you, by name, whether you trust it. An app you allow is heard only while it is the app in front, and it can do nothing but speak: no settings, no keys. Settings, Apps that speak through TurnOver, lists them and changes your answer.</p>
 <h2>Passwords and security prompts</h2>
-<p>One reader speaks at a time: TurnOver while it is on, VoiceOver while TurnOver is off.</p>
-<p>is in one. TurnOver counts the characters instead.</p>
+<p>With CoExist on (it is unless you turn it off), VoiceOver stays running alongside TurnOver, and everything to do with security is VoiceOver's:</p>
+<p>lands in one), TurnOver steps aside completely. It doesn't read the field and doesn't take your keys; VoiceOver is heard. TurnOver comes back when you leave it.</p>
+<ul>
+<li><strong>Password fields, in any app or web page:</strong> when one has the keyboard (macOS's secure typing is on, or TurnOver</li>
+</ul>
+<p>is in one.</p>
 <ul>
 <li><strong>Typing into a password field is never spoken or logged</strong> by TurnOver, even where an app hides that the keyboard</li>
 </ul>
-<p>prompt when it opens and puts you in it, and takes you back to your app when it closes.</p>
+<p>VoiceOver's from the moment they open until they close.</p>
 <ul>
-<li><strong>macOS's own prompts</strong> (an administrator password, the keychain, Touch ID, "Allow" questions): TurnOver reads the</li>
+<li><strong>macOS's own prompts</strong> (an administrator password, the keychain, Touch ID, "Allow" questions): the same,</li>
 </ul>
-<p>comes on if you have set it to, or press Command F5.</p>
-<ul>
-<li>If you would rather Apple's own reader handled a prompt, turn TurnOver off with Command Control Period: VoiceOver</li>
-</ul>
+<p>So Apple's own reader is the one with you whenever you type a password or approve something, and TurnOver never sees it. With CoExist off, TurnOver still never speaks or logs what you type into a password field.</p>
 <h2>When we get something wrong</h2>
 <p>We'll say so here and in What's new.</p>
 <p>told TurnOver the keyboard was somewhere other than the password field. It was found the same day and fixed for every app: typing into a password field is never spoken or logged, wherever the app says the keyboard is. It needed an app that hides where the keyboard is, as Kindle's sign-in does; Kindle support was new that day, so we know of no released build where it happened.</p>

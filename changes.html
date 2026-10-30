@@ -6,6 +6,49 @@
 <body><main>
 <h1>What's new in TurnOver</h1>
 <p>The newest build is first. &quot;Reported by a tester&quot; marks a fix for something a tester sent in. Thank you.</p>
+<h2>2.0, build 23</h2>
+<h3>Changed</h3>
+<ul>
+<li>Braille: panning to another line moves the caret there, so the arrows carry on from the line read. The Braille section of Settings offers Line by line (the default), To the text shown, or Off. Tethered to review, panning moves only the review cursor.</li>
+<li>Braille: Apple USB and HID drivers are polled and written on the braille thread, as Bluetooth drivers are, so a</li>
+<li>A window with nothing TurnOver can read (a custom-drawn or OpenGL window: Parallels&#x27; installation assistant, Bambu</li>
+<li>The verbosity manager: Settings, Item details now lists what is said about an item, in the order it is said (name,</li>
+</ul>
+<h2>2.0, build 22.4</h2>
+<h3>Fixed</h3>
+<ul>
+<li>Open and Save dialogs are read: a file dialog in TextEdit, or &quot;browse for file&quot; on a web page in Safari. macOS</li>
+<li>After the Mac wakes and is unlocked, TurnOver takes over again when the swap is off. TurnOver turns VoiceOver on</li>
+<li>App Store: Return on a search result opens it. The results page&#x27;s container reports no size, so every row counted</li>
+<li>VO-Left and VO-Right can move past segmented controls, such as the buttons in a SwiftUI picker, without getting</li>
+<li>Finder&#x27;s desktop: each item says its own place (&quot;3 of 35&quot;), not &quot;35 of 35&quot; for every one. Reported by jcast77</li>
+<li>TurnOver Key: pressing Command Control Period again just after &quot;TurnOver off&quot; no longer leaves the key doing nothing</li>
+<li>An app that refuses TurnOver&#x27;s notification sign-ups as it comes forward (Telegram from the Mac App Store) no longer</li>
+<li>Windows style: Option D, which opens the Desktop folder, no longer leaves TurnOver silent while macOS asks for</li>
+<li>Copy VoiceOver settings reads a VoiceOver export that stores its voice the newer, flattened way; it failed with</li>
+<li>Pages: a document just opened can be read with the arrows. Pages reported its page layout as the focus, with no</li>
+<li>Next and previous item reach the texts between the buttons of a System Settings pane, which said &quot;nothing to</li>
+<li>JAWS keys do what JAWS&#x27;s do: Caps Lock Apostrophe, Option Caps Lock X, Caps Lock V and Caps Lock F3 have their</li>
+<li>Clicks are made as a hand makes them, the pointer there first and the button held a moment, so a dialog that</li>
+<li>Turning VoiceOver on uses VoiceOver&#x27;s own shortcut first, which is quicker, and opens VoiceOver only if that fails.</li>
+<li>The TurnOver layer&#x27;s K changes the keyboard style without TurnOver stepping in where VoiceOver leads, and the new</li>
+<li>The spoken Tab hint in password fields is gone: it got in the way of moving around.</li>
+<li>Settings: the Experimental group is a plain section; its disclosure triangle wouldn&#x27;t open from the keyboard.</li>
+<li>The control channel between TurnOver, its Settings window and TurnOver Key keeps every message whole under load,</li>
+<li>Plugins from the library: an archive that expands well beyond its stated size, or holds files its listing doesn&#x27;t</li>
+<li>Speech: when TurnOver&#x27;s voice never starts as it is needed (the system voice stuck), VoiceOver is given the speech</li>
+<li>Starting TurnOver waits until its keyboard access is really working before it mutes VoiceOver, so a start can&#x27;t</li>
+<li>Moving by character keeps a letter or emoji made of several parts whole, in text fields and in Terminal.</li>
+<li>Searching a window for the next heading, link or control no longer holds TurnOver up, and results that arrive</li>
+<li>App Store: pages are read in the page&#x27;s own order, the first content is read before shelves further down finish</li>
+<li>Music, Podcasts and TV: pages are read one at a time and a late read is dropped, the selection stays on the same</li>
+<li>TV: choosing Home in the sidebar goes to Home&#x27;s page instead of staying on Search, and shelves are read as soon as</li>
+<li>Word: page reading checks that the window and the page range are still current, and Word&#x27;s own sound at the start</li>
+<li>Mail: a message is read even when it sits beside an editable reply area. Issue 179.</li>
+<li>Safari: a late reply from Find or a tab switch is no longer spoken after you&#x27;ve moved on. Issue 181.</li>
+<li>Speech recovery: a voice queue still stuck after sleep or wake-up grace gets another recovery attempt. A late</li>
+<li>Privacy: typed keys and braille cells are kept out of diagnostic logs, braille typing echo stays out of speech</li>
+</ul>
 <h2>2.0, build 22.3</h2>
 <h3>Fixed</h3>
 <ul>
