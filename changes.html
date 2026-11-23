@@ -6,12 +6,28 @@
 <body><main>
 <h1>What's new in TurnOver</h1>
 <p>The newest build is first. &quot;Reported by a tester&quot; marks a fix for something a tester sent in. Thank you.</p>
+<h2>2.0, build 25.1</h2>
+<h3>New to try</h3>
+<ul>
+<li>Zoom: in a meeting, Zoom&#x27;s own keys speak. Mute, video, raising your hand and reactions say what they did: &quot;muted&quot;, &quot;video on&quot;, &quot;hand raised&quot;, or the reaction sent. Command Shift 2 says who is speaking. Zoom itself said nothing for any of them.</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>App Switcher now follows focus to the app you choose and handles the first navigation or typing key in order.</li>
+<li>VoiceOver starts on the lock screen even if macOS misses a lock notification. TurnOver resumes after unlock.</li>
+<li>The menu bar keeps its place when you show hidden items and reads the expanded list. Moving focus away releases the held menu bar, and Escape announces the item where you return in browse mode.</li>
+<li>The battery menu bar item now reads its charge level.</li>
+<li>Dismissing a Google Drive alert opened through the Application Chooser returns you to the previous app.</li>
+<li>Speech can recover from a stuck audio player without crashing TurnOver.</li>
+<li>TurnOver reads past the previous limit when Codex automatically announces a long reply.</li>
+<li>Plain Space, Return, keypad Enter and Escape go directly to macOS when a protected system prompt is in front.</li>
+</ul>
 <h2>2.0, build 25</h2>
 <h3>New to try</h3>
 <ul>
 <li>Your own sound sets: Settings, Sounds has two new buttons, &quot;Open the sound sets folder&quot; and &quot;Make a starter set&quot;, and &quot;Whose sounds&quot; also lists every folder of audio files you put there, one file per event; where a set has no file TurnOver&#x27;s own sound plays, and an empty file is silence.</li>
 <li>With VoiceOver&#x27;s sounds chosen, activating an item, turning the rotor, a search wrapping round the page, a window coming to the front (not the Finder desktop) and a dialog or system prompt appearing now play VoiceOver&#x27;s own sounds.</li>
-<li>Mouse tracking: Settings, Item details, &quot;Read what is under the mouse pointer as it moves&quot; (or NVDA+M in the Windows keyboard style) reads each item the pointer crosses, as VoiceOver&#x27;s cursor following the mouse pointer does. It is off until turned on. The keyboard focus never moves with the pointer; the review cursor goes to the item, as NVDA&#x27;s review cursor follows the mouse. A blank place (a window&#x27;s background, a group with no name) is silent, and coming back to an item reads it again. Each new item cuts off whatever is being said, as VoiceOver does when the pointer moves: a tester found that notifications, live announcements and the speech from opening a chat kept talking over the pointer, which made it no faster than the keyboard. The whole lookup, the item&#x27;s name, role, value, state and a group&#x27;s item count, is read off the main thread under one deadline, and only the finished text is handed back, so an app that stops answering cannot freeze TurnOver. This reads less than the keyboard does: app-specific names (Mail, Excel, Finder, Calendar, Dock, Terminal and others), plugin and profile labels, the Item details order and toggles, position information and the &quot;goes in&quot; hint are left out. What it says is private: it is not kept in the speech history, and the log holds only the kind of item and the app, never its words. It watches the pointer only while TurnOver is the reader, and it waits while Say All or the trackpad&#x27;s explore is reading. If an app holds the lookup for over a second, the lookup is given up and the pointer is read again.</li>
+<li>Mouse tracking: Settings, Item details, &quot;Read what is under the mouse pointer as it moves&quot; (or NVDA+M in the Windows keyboard style) reads each item the pointer crosses, as VoiceOver&#x27;s cursor following the mouse pointer does. It is off until turned on. The keyboard focus never moves with the pointer; the review cursor goes to the item, as NVDA&#x27;s review cursor follows the mouse. The cursor follows the pointer only into the app in front, or the app the keys are in: an item in another app&#x27;s window, on the Dock or in the menu bar is still said, and the cursor stays where it was. A blank place (a window&#x27;s background, a group with no name) is silent, and coming back to an item reads it again. Each new item cuts off whatever is being said, as VoiceOver does when the pointer moves: a tester found that notifications, live announcements and the speech from opening a chat kept talking over the pointer, which made it no faster than the keyboard. The whole lookup, the item&#x27;s name, role, value, state and a group&#x27;s item count, is read off the main thread under one deadline, and only the finished text is handed back, so an app that stops answering cannot freeze TurnOver. This reads less than the keyboard does: app-specific names (Mail, Excel, Finder, Calendar, Dock, Terminal and others), plugin and profile labels, the Item details order and toggles, position information and the &quot;goes in&quot; hint are left out. What it says is private: it is not kept in the speech history, and the log holds only the kind of item and the app, never its words. It watches the pointer only while TurnOver is the reader, and it waits while Say All or the trackpad&#x27;s explore is reading. If an app holds the lookup for over a second, the lookup is given up and the pointer is read again.</li>
 <li>Deleted text by pitch: Settings, Speech, &quot;Lower the pitch for deleted text, instead of saying deleted&quot; says a deleted character or word lower, as VoiceOver does, without the word &quot;deleted&quot;. Off by default. A deleted capital is lowered too when capitals are raised.</li>
 </ul>
 <h3>Changed</h3>
@@ -30,6 +46,7 @@
 </ul>
 <h3>Fixed</h3>
 <ul>
+<li>After an update, and when TurnOver quits with &quot;turn VoiceOver back on&quot; switched on, VoiceOver now comes on in a fraction of a second. TurnOver had been opening VoiceOver as an app, which on macOS 27.2 sits for about ten seconds before it reads, so the &quot;what&#x27;s new&quot; pages came up with nobody reading them. TurnOver now presses VoiceOver&#x27;s own on and off shortcut first, as the hand-over between apps already does, and opens the app only if the shortcut does not bring VoiceOver.</li>
 <li>Launching an app from Finder no longer makes TurnOver say the bare word &quot;application&quot;: an activation notice that names no running application is ignored.</li>
 <li>Claude: Space on a checkable item in a menu that stays open, such as &quot;Goal&quot; in the &quot;Show&quot; menu, now says the item&#x27;s new state, for example &quot;Goal, checked&quot;.</li>
 <li>Safari: H (and the other quick keys, and a choice from the Elements list) on a heading too long for one line now reads the whole heading, as VoiceOver does, not its first line with the rest left for Down Arrow.</li>
